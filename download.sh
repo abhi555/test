@@ -11,7 +11,7 @@ NAME="$2"
 
 echo "Step 1: Downloading video..."
 # Use %(ext)s so yt-dlp assigns the correct extension (webm, mp4, mkv, etc.)
-yt-dlp "$URL" -o "$NAME.%(ext)s"
+yt-dlp  --cookies-from-browser chrome "$URL" -o "$NAME.%(ext)s"
 
 # Find the file that was just downloaded 
 # (Looks for files starting with your video name, excluding already compressed ones)
